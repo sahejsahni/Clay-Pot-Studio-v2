@@ -1262,7 +1262,6 @@ a:hover {
 }
 
 .input-field {
-  height: 38px;
   margin-bottom: 0px;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1272,12 +1271,52 @@ a:hover {
   border-color: #f5eee3;
   border-radius: 0.25rem;
   background-color: transparent;
+  -webkit-transition: background-color 200ms ease, box-shadow 200ms ease;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
   font-family: 'Hk Grotesk', sans-serif;
   font-size: 1rem;
 }
 
+.input-field:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 238, 227, 0)), to(rgba(245, 238, 227, 0.16)));
+  background-image: linear-gradient(180deg, rgba(245, 238, 227, 0), rgba(245, 238, 227, 0.16));
+  box-shadow: 0 4px 10px -2px rgba(245, 238, 227, 0.3);
+  color: #f5eee3;
+  background-clip: border-box;
+}
+
+.input-field:active {
+  border-color: #6e685f;
+  background-image: none;
+  box-shadow: none;
+  font-weight: 600;
+}
+
+.input-field:focus {
+  border-width: 0.1rem;
+  border-color: #f5eee3;
+  color: #f5eee3;
+  font-weight: 600;
+}
+
+.input-field::-webkit-input-placeholder {
+  color: #f5eee3;
+}
+
+.input-field:-ms-input-placeholder {
+  color: #f5eee3;
+}
+
+.input-field::-ms-input-placeholder {
+  color: #f5eee3;
+}
+
+.input-field::placeholder {
+  color: #f5eee3;
+}
+
 .input-field.comments {
-  height: auto;
+  max-height: 100%;
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   -ms-grid-row-align: auto;
@@ -1290,6 +1329,10 @@ a:hover {
   border-radius: 0rem;
   line-height: 20px;
   white-space: normal;
+}
+
+.input-field.comment-area {
+  height: 10rem;
 }
 
 .field-wrapper {
@@ -2574,9 +2617,6 @@ a:hover {
   right: 0%;
   bottom: 0%;
   z-index: 9007199254740991;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
