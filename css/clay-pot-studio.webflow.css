@@ -92,6 +92,10 @@ a:hover {
   background-color: #131313;
 }
 
+.body.no-scroll {
+  overflow: hidden;
+}
+
 .gif-projects {
   overflow: hidden;
   width: 100%;
@@ -201,9 +205,9 @@ a:hover {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   -webkit-box-ordinal-group: 1;
   -webkit-order: 0;
   -ms-flex-order: 0;
@@ -562,6 +566,14 @@ a:hover {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
+}
+
+.text-logo.preloader {
+  position: absolute;
+  left: 0%;
+  top: 10%;
+  right: 0%;
+  bottom: auto;
 }
 
 .hero-wrapper {
@@ -2555,6 +2567,60 @@ a:hover {
   width: 70%;
 }
 
+.preloader {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 9007199254740991;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #131313;
+  opacity: 1;
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+.pl-two {
+  opacity: 0;
+  font-size: 1rem;
+}
+
+.pl-three {
+  opacity: 0;
+  font-size: 1rem;
+}
+
+.pl-one {
+  opacity: 0;
+  font-size: 1rem;
+}
+
+.logo-text-only {
+  font-family: 'Hk Grotesk', sans-serif;
+  color: #f5eee3;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 2.5rem;
@@ -2586,8 +2652,17 @@ a:hover {
     flex-direction: column;
   }
 
+  .navbar {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
   .nav-section {
-    display: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .nav-section.open {
@@ -3116,6 +3191,10 @@ a:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 19, 19, 0.97)), to(rgba(19, 19, 19, 0.85)));
     background-image: linear-gradient(180deg, rgba(19, 19, 19, 0.97), rgba(19, 19, 19, 0.85));
   }
+
+  .preloader {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -3128,6 +3207,13 @@ a:hover {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+
+  .nav-section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .button.primary.centre {
@@ -3189,6 +3275,17 @@ a:hover {
     width: 4rem;
     height: 3.9rem;
   }
+
+  .full-page-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .preloader {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -3221,6 +3318,19 @@ a:hover {
     -ms-flex-item-align: stretch;
     -ms-grid-row-align: stretch;
     align-self: stretch;
+  }
+
+  .navbar {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .nav-section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .nav-link.full-nav {
@@ -3292,6 +3402,10 @@ a:hover {
 
   .button.secondary.double-cta {
     margin-left: 0rem;
+  }
+
+  .text-logo.preloader {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
   .hero-wrapper {
@@ -4016,6 +4130,35 @@ a:hover {
   .nav-background-color {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#131313), to(rgba(19, 19, 19, 0.93)));
     background-image: linear-gradient(180deg, #131313, rgba(19, 19, 19, 0.93));
+  }
+
+  .preloader {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+
+  .pl-two {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .pl-three {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .pl-one {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .logo-text-only {
+    position: relative;
+    font-family: 'Hk Grotesk', sans-serif;
+    color: #f5eee3;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
   }
 }
 
