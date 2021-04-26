@@ -3631,10 +3631,6 @@ a:hover {
 
   .promises-list-wrapper {
     position: static;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -3644,6 +3640,7 @@ a:hover {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    grid-row-gap: 2.5rem;
   }
 
   .process-heading {
@@ -3656,7 +3653,6 @@ a:hover {
 
   .process-single {
     width: 100%;
-    margin-bottom: -2rem;
     text-align: left;
   }
 
